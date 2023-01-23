@@ -13,7 +13,7 @@ router.get("/new", (req, res) => {
 
 // Create Author route
 router.post("/", (req, res) => {
-    res.render("authors/new");
+    res.send("Create");
 });
 
 module.exports = router;
