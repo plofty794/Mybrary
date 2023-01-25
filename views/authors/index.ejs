@@ -1,1 +1,9 @@
-All Authors
+<h2>Search Author</h2>
+<form action="/authors" method="get">
+    <input type="text" name="name" value="<%= searchOptions.name %>" />
+    <button type="submit">Search</button>
+</form>
+<br />
+<% authors.forEach(author => { %>
+<div><%= author.name %></div>
+<% }) %>
