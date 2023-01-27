@@ -6,6 +6,7 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const indexRoute = require("./routes/indexRoute");
 const authorsRoute = require("./routes/authorsRoute");
+const booksRoute = require("./routes/booksRoute");
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
@@ -19,6 +20,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.use("/", indexRoute);
 app.use("/authors", authorsRoute);
+app.use("/books", booksRoute);
 
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,

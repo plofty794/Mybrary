@@ -1,0 +1,7 @@
+<h2>New Book</h2>
+<%- include('../partials/errorMessage.ejs') %>
+<form action="/books" method="post">
+    <%- include('_form_fields') %>
+    <a href="/books">Cancel</a>
+    <button type="submit">Create Book</button>
+</form>
