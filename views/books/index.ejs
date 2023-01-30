@@ -1,7 +1,44 @@
 All Books
 
-<!-- <h2>Search Book</h2>
+<h2>Search Book</h2>
+
 <form action="/books" method="get">
-    <input type="text" name="name" value="" />
+    <div>
+        <label>Title</label>
+        <input type="text" name="title" value=" <%= searchOptions.title %> " />
+    </div>
+    <div>
+        <label>Published before</label>
+        <input
+            type="date"
+            name="publishedBefore"
+            value=" <%= searchOptions.publishedBefore %> "
+        />
+    </div>
+    <div>
+        <label>Published after</label>
+        <input
+            type="date"
+            name="publishedAfter"
+            value=" <%= searchOptions.publishedAfter %> "
+        />
+    </div>
     <button type="submit">Search</button>
-</form> -->
+</form>
+
+<div>
+    <% books.forEach(book => { %>
+    <img
+        height="200"
+        width="150"
+        src=" <%= book.coverImagePath %> "
+        alt=" Book Title: <%= book.title %>  "
+    />
+    <% }) %>
+</div>
+
+<script>
+    let input = document.querySelector("input[type='text']");
+    input.value = input.value.trim();
+    console.log(input);
+</script>
