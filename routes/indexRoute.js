@@ -9,9 +9,7 @@ router.get("/", async (req, res) => {
             .sort({ createdAt: "descending" })
             .limit(10)
             .exec();
-        res.render("index", {
-            books: books,
-        });
+        res.render("index", { books: books });
     } catch (error) {
         books = [];
     }

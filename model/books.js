@@ -26,6 +26,7 @@ const booksSchema = new mongoose.Schema({
     },
     coverImageName: {
         type: String,
+        required: true,
     },
     authors: {
         type: mongoose.Schema.Types.ObjectId,

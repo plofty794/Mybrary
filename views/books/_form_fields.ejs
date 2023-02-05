@@ -1,11 +1,6 @@
 <div class="book-title">
     <label for="book-name">Title</label>
-    <input
-        id="book-name"
-        type="text"
-        name="title"
-        value=" <%= book.title %> "
-    />
+    <input id="book-name" type="text" name="title" value="<%= book.title %>" />
 </div>
 <div class="authors">
     <label for="book-author">Author</label>
@@ -13,14 +8,11 @@
         <% authors.forEach(author => { %> <% if (author.id === book.author) { %>
         <option
             selected
-            label=" <%= author.name %> "
-            value=" <%= author.id %> "
+            label="<%= author.name %>"
+            value="<%= author.id %>"
         ></option>
         <% } else { %>
-        <option
-            label=" <%= author.name %> "
-            value=" <%= author.id %> "
-        ></option>
+        <option label="<%= author.name %>" value="<%= author.id %>"></option>
         <% } %> <% }) %>
     </select>
 </div>
@@ -30,7 +22,7 @@
         id="book-publish-date"
         type="date"
         name="publishDate"
-        value=" <%= book.publishDate == null ? '' : book.publishDate.toISOString().split('T')[0] %>  "
+        value="<%= book.publishDate == null ? '' : book.publishDate.toISOString().split('T')[0] %>"
     />
 </div>
 <div class="page-count">
@@ -40,7 +32,7 @@
         type="number"
         min="1"
         name="pageCount"
-        value=" <%= book.pageCount %> "
+        value="<%= book.pageCount %>"
     />
 </div>
 <div class="book-cover">
