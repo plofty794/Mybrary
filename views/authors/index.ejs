@@ -5,5 +5,10 @@
 </form>
 
 <% authors.forEach(author => { %>
-<div><h2><%= author.name %></h2></div>
+<div>
+    <h2><%= author.name %></h2>
+    <a href="/authors/<%= author.id %>/view">View</a>
+    <a href="/authors/<%= author.id %>/edit">Edit</a>
+    <%- include('../partials/deleteForm.ejs', {url: `/authors/${author.id}`}) %>
+</div>
 <% }) %>
