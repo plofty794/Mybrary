@@ -4,7 +4,7 @@
 </div>
 <div class="authors">
     <label for="book-author">Author</label>
-    <select name="authors" id="book-author">
+    <select name="author" id="book-author">
         <% authors.forEach(author => { %> <% if (author.id === book.author) { %>
         <option
             selected
@@ -37,7 +37,7 @@
 </div>
 <div class="book-cover">
     <label for="book-cover">Book Cover</label>
-    <input id="book-cover" type="file" name="cover" />
+    <input id="book-cover" type="file" name="cover" class="filepond" />
 </div>
 <div class="book-desc">
     <label for="book-description">Description</label>

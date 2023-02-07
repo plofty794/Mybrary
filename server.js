@@ -10,13 +10,13 @@ const booksRoute = require("./routes/booksRoute");
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
+app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.set("layout", "layouts/layout");
 app.use(expressLayouts);
 app.use(express.urlencoded({ limit: "10mb", extended: false }));
 app.use(express.json());
-app.use(express.static(__dirname + "/public"));
 
 app.use("/", indexRoute);
 app.use("/authors", authorsRoute);
