@@ -45,10 +45,21 @@ router.post("/", async (req, res) => {
     saveCoverImage(book, req.body.cover);
     try {
         const newBook = await book.save();
-        res.redirect("books");
+        res.redirect(`/books/${newBook.id}`);
     } catch (error) {
         console.error(error);
         renderNewPage(res, book, true);
+    }
+});
+
+router.get("/:id", async (req, res) => {
+    try {
+        const book = await Book.findById(req.params.id)
+            .populate({ path: "author", select: "name" })
+            .exec();
+        res.render("books/view", { book: book });
+    } catch (error) {
+        res.redirect("/");
     }
 });
 
