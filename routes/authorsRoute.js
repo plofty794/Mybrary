@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
     });
     try {
         const newAuthor = await author.save();
-        res.redirect(`authors/${newAuthor.id}`);
+        res.redirect(`/authors/${newAuthor.id}`);
     } catch {
         res.render("authors/new", {
             author: author,
@@ -42,7 +42,7 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-    res.send(`Show Author ${req.params.id}`);
+    res.redirect(`/authors/${req.params.id}/view`);
 });
 
 router.get("/:id/view", async (req, res) => {
@@ -80,7 +80,7 @@ router.patch("/:id", async (req, res) => {
         if (author == null) {
             res.redirect("/");
         } else {
-            res.render(`/authors/${req.params.id}`, {
+            res.render(`authors/${req.params.id}/edit`, {
                 author: author,
                 errorMessage: "Error updating author",
             });
@@ -98,8 +98,7 @@ router.delete("/:id", async (req, res) => {
         if (author == null) {
             res.redirect("/");
         } else {
-            console.error(error.message);
-            res.redirect(`/authors/${author.id}`);
+            res.redirect(`/authors/${author.id}/view`);
         }
     }
 });

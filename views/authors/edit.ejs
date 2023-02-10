@@ -1,7 +1,7 @@
-<h2>Update Author</h2>
+<h2>Rename Author</h2>
 <%- include('../partials/errorMessage.ejs') %>
 <form action="/authors/<%= author.id %>?_method=patch" method="post">
     <%- include('_form_fields') %>
     <a href="/authors/<%= author.id %>">Cancel</a>
-    <button type="submit">Rename Author</button>
+    <button type="submit">Rename</button>
 </form>
