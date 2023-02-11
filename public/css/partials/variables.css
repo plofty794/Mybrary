@@ -1,0 +1,39 @@
+.grid {
+    display: grid;
+}
+
+.col-3 {
+    grid-template-columns: repeat(3, 10rem);
+}
+
+.flex {
+    display: flex;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.m-w-75 {
+    max-width: 75rem;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.p-i-c {
+    place-items: center;
+}
+
+.image-container {
+    padding: 0.5rem;
+}

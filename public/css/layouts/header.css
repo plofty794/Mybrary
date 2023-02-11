@@ -1,0 +1,18 @@
+@import url(../partials/variables.css);
+
+.header {
+    background-color: rgb(78, 78, 160);
+}
+
+.nav {
+    margin-inline: auto;
+    padding: 0.8rem 1rem;
+}
+
+.nav > h1 {
+    font-size: 2.2rem;
+}
+
+.nav a {
+    color: white;
+}

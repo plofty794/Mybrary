@@ -1,14 +1,21 @@
-<div>
+<div class="home m-w-75">
     <% if (books.length > 1) { %>
     <h2>Recently Added Books</h2>
     <% } else {%>
     <h2>Recently Added Book</h2>
-    <% } %> <% books.forEach(book => { %>
-    <img
-        height="200"
-        width="150"
-        src="<%= book.coverImagePath %>"
-        alt="Book Title: <%= book.title %>"
-    />
-    <% }) %>
+    <% } %>
+    <div class="books-container grid col-3 jc-c">
+        <% books.forEach(book => { %>
+        <div class="image-container">
+            <a href="/books/<%= book.id %>">
+                <img
+                    height="200"
+                    width="150"
+                    src="<%= book.coverImagePath %>"
+                    alt="Book Title: <%= book.title %>"
+                />
+            </a>
+        </div>
+        <% }) %>
+    </div>
 </div>

@@ -1,0 +1,16 @@
+@import url(../partials/variables.css);
+@import url("https://fonts.googleapis.com/css2?family=Babylonica&display=swap");
+.home {
+    text-align: center;
+    margin-inline: auto;
+    padding: 1rem;
+}
+
+.home > h2 {
+    font-size: 2.5rem;
+    font-family: "Babylonica", cursive;
+}
+
+.books-container {
+    padding-block: 1rem;
+}
