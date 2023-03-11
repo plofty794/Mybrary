@@ -1,0 +1,25 @@
+.container {
+    min-height: max-content;
+}
+
+.new-author-container {
+    width: 25rem;
+    box-shadow: 0 0 0.5rem rgb(43, 42, 42);
+    border-radius: 0.7rem;
+    padding-inline: 2.2rem;
+    margin-inline: auto;
+    margin-block: 5rem 0;
+    gap: 1.2rem;
+}
+
+.new-author-container > h2 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+    text-align: center;
+    margin-block-start: 1rem;
+}
+
+.new-author-container > form {
+    flex: 1;
+    margin-block: 0 2rem;
+}

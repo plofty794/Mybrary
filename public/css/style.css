@@ -1,11 +1,11 @@
 @import url(./layouts/header.css);
 @import url(./layouts/home.css);
+@import url(./layouts/newAuthor.css);
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    font-family: "Oswald", sans-serif;
     box-sizing: border-box;
 }
 
@@ -41,6 +41,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    font-family: "Oswald", sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -63,21 +64,4 @@ button,
 textarea,
 select {
     font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-        scroll-behavior: auto;
-    }
-    *,
-    *::before,
-    *::after {
-        -webkit-animation-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        -webkit-animation-iteration-count: 1 !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
 }

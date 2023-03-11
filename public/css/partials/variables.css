@@ -3,15 +3,23 @@
 }
 
 .col-3 {
-    grid-template-columns: repeat(3, 10rem);
+    grid-template-columns: repeat(3, 10.4rem);
 }
 
 .flex {
     display: flex;
 }
 
+.f-d-c {
+    flex-direction: column;
+}
+
 .jc-sb {
     justify-content: space-between;
+}
+
+.jc-c {
+    justify-content: center;
 }
 
 .ai-c {
@@ -34,6 +42,54 @@
     place-items: center;
 }
 
+.m-h-100vh {
+    min-height: 100vh;
+}
+
 .image-container {
     padding: 0.5rem;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    border-radius: 0.3rem;
+    outline: 2px solid black;
+    padding: 0.2rem 0.6rem;
+    background-color: white;
+}
+
+.button:hover {
+    transform: translateY(0.5px);
+}
+
+.button:active {
+    transform: translateY(2px);
+}
+
+a {
+    color: black;
+}
+
+input {
+    outline: 1px solid black;
+    border: none;
+    padding: 0.3rem;
+    margin-inline: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.book-cover {
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+    transition: 150ms ease-in-out;
+}
+
+.book-cover:hover {
+    transform: scale(1.1);
 }
