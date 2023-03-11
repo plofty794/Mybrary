@@ -84,8 +84,9 @@ input {
 }
 
 .book-cover {
-    height: 30vh;
-    width: 100%;
+    margin-inline: auto;
+    height: max-content;
+    max-width: 30rem;
     object-fit: cover;
     transition: 150ms ease-in-out;
 }
